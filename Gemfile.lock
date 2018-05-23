@@ -96,7 +96,7 @@ GIT
 
 GIT
   remote: https://github.com/janbiedermann/opal.git
-  revision: 7b3219a43f86fe39d6ad7c32624bec6b6f415c5f
+  revision: 4840b1c241741ece0f61606082ff23be4cb8e675
   branch: es6_import_export
   specs:
     opal (0.11.1.dev)
@@ -301,7 +301,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    websocket (1.2.5)
+    websocket (1.2.7)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
