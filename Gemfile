@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'opal', github: 'janbiedermann/opal', branch: 'es6_import_export'
-gem 'opal-webpack-compile-server', '0.0.2'
+gem 'opal-webpack-compile-server', '0.1.4'
 
 gem 'hyper-component', github: 'janbiedermann/hyper-component', branch: 'pinata'
 gem 'hyper-mesh', github: 'janbiedermann/hyper-mesh', branch: 'pinata'
@@ -63,6 +63,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
-  gem 'opal_hot_reloader'
   gem 'foreman'
 end

@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const OpalWebpackResolverPlugin = require('opal-webpack-resolver-plugin');
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     optimization: {
         minimize: false
     },
@@ -14,17 +14,6 @@ module.exports = {
     // devtool: 'cheap-eval-source-map',
     // devtool: 'inline-source-map',
     // devtool: 'inline-cheap-source-map',
-    devServer: {
-        disableHostCheck: true,
-        hot: true,
-        host: 'localhost',
-        port: 8080,
-        public: 'localhost:8080',
-        publicPath: 'http://localhost:8080/assets/',
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
-    },
     entry: {
         application: './app/assets/javascripts/application.js'
     },

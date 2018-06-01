@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: https://github.com/janbiedermann/hyper-operation.git
-  revision: bc1793ee4251c3a8b00e7e6a0c3d64bd3c63adcb
+  revision: e84d5b3e9f62e2d8891c11345f53257553eb4dd2
   branch: pinata
   specs:
     hyper-operation (1.0.0.lap28)
@@ -74,7 +74,7 @@ GIT
 
 GIT
   remote: https://github.com/janbiedermann/hyperloop-config.git
-  revision: 0ad60f3e1a2f6cf4e5920865c0a2115c825ee726
+  revision: 4886523adb3812a90f9edae98f87c5074f33247a
   branch: pinata
   specs:
     hyperloop-config (1.0.0.lap28)
@@ -96,7 +96,7 @@ GIT
 
 GIT
   remote: https://github.com/janbiedermann/opal.git
-  revision: 4840b1c241741ece0f61606082ff23be4cb8e675
+  revision: aa0802c8df2e50a50c5f6e4b9c002113ac362d3a
   branch: es6_import_export
   specs:
     opal (0.11.1.dev)
@@ -164,7 +164,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.1.0)
+    capybara (3.1.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -177,7 +177,7 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     concurrent-ruby (1.0.5)
-    connection_pool (2.2.1)
+    connection_pool (2.2.2)
     crass (1.0.4)
     erubi (1.7.1)
     eventmachine (1.2.7)
@@ -220,19 +220,16 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    oj (3.6.0)
+    oj (3.6.2)
     opal-activesupport (0.3.1)
       opal (>= 0.5.0, < 1.0.0)
     opal-browser (0.2.0)
       opal
       paggio
-    opal-webpack-compile-server (0.0.2)
+    opal-webpack-compile-server (0.1.4)
       eventmachine (~> 1.2.7)
       oj (~> 3.6.0)
       opal (>= 0.11.0)
-    opal_hot_reloader (0.1.6)
-      listen (~> 3.0)
-      websocket
     paggio (0.2.6)
     parser (2.5.1.0)
       ast (~> 2.4.0)
@@ -301,11 +298,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    websocket (1.2.7)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    xpath (3.0.0)
+    xpath (3.1.0)
       nokogiri (~> 1.8)
 
 PLATFORMS
@@ -329,8 +325,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   opal!
-  opal-webpack-compile-server (= 0.0.2)
-  opal_hot_reloader
+  opal-webpack-compile-server (= 0.1.4)
   puma (~> 3.11)
   rails (~> 5.2.0)
   selenium-webdriver
@@ -342,4 +337,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
