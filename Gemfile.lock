@@ -226,7 +226,7 @@ GEM
     opal-browser (0.2.0)
       opal
       paggio
-    opal-webpack-compile-server (0.1.4)
+    opal-webpack-compile-server (0.1.5)
       eventmachine (~> 1.2.7)
       oj (~> 3.6.0)
       opal (>= 0.11.0)
@@ -325,7 +325,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   opal!
-  opal-webpack-compile-server (= 0.1.4)
+  opal-webpack-compile-server (= 0.1.5)
   puma (~> 3.11)
   rails (~> 5.2.0)
   selenium-webdriver
