@@ -21,9 +21,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'opal', github: 'janbiedermann/opal', branch: 'es6_import_export'
-gem 'opal-webpack-compile-server', '0.1.5'
 
+gem 'c_lexer' # accelerate opal compiler
+gem 'opal', github: 'janbiedermann/opal', branch: 'es6_import_export' # need this branch
+# and this, its started by the yarn run commands and serves opal-webpack-loader by compiling ruby files for it
+gem 'opal-webpack-compile-server', '0.1.7', require: false
+
+# need the pinata branch
 gem 'hyper-component', github: 'janbiedermann/hyper-component', branch: 'pinata'
 gem 'hyper-mesh', github: 'janbiedermann/hyper-mesh', branch: 'pinata'
 gem 'hyper-model', github: 'janbiedermann/hyper-model', branch: 'pinata'
@@ -47,6 +51,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # springs seems to cause trouble
   #gem 'spring'
   #gem 'spring-watcher-listen', '~> 2.0.0'
 end
@@ -63,5 +68,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
-  gem 'foreman'
+  # not needed if you use node-foreman
+  # gem 'foreman'
 end

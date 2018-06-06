@@ -4,7 +4,5 @@ Hyperloop.configuration do |config|
   config.transport = :simple_poller # or :pusher or :simpler_poller or :none
   config.prerendering = :off # or :on
   config.import 'reactrb/auto-import' # will automatically bridge js components to hyperloop components
-  # config.import 'jquery', client_only: true  # remove this line if you don't need jquery
   # config.import 'opal-jquery', client_only: true # remove this line if you don't need jquery'
-  # config.import 'opal_hot_reloader' if Rails.env.development?
 end

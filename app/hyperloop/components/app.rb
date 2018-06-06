@@ -1,7 +1,7 @@
 class App < Hyperloop::Router
 
   route do
-    DIV do
+    DIV(class_name: 'hello') do
       "App 34"
       # define routes using the Route psuedo component.  Examples:
       # Route('/foo', mounts: Foo)                : match the path beginning with /foo and mount component Foo here

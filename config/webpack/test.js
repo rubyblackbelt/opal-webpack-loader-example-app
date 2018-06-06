@@ -3,7 +3,9 @@ const webpack = require('webpack');
 const OpalWebpackResolverPlugin = require('opal-webpack-resolver-plugin');
 
 module.exports = {
-    mode: "production",
+    parallelism: 8,
+    context: path.resolve(__dirname, '../..'),
+    mode: "test",
     optimization: {
         minimize: false
     },
@@ -11,20 +13,15 @@ module.exports = {
         maxAssetSize: 20000000,
         maxEntrypointSize: 20000000
     },
-    // devtool: 'cheap-eval-source-map',
-    // devtool: 'inline-source-map',
-    // devtool: 'inline-cheap-source-map',
     entry: {
-        application: './app/assets/javascripts/application.js'
+        app_packs: './app/javascript/packs/app_packs.js',
+        website_packs: './app/javascript/packs/website_packs.js'
     },
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'public'),
-        publicPath: 'http://localhost:8080/assets/'
+        filename: '[name]_test.js',
+        path: path.resolve(__dirname, '../../public/packs'),
+        publicPath: '/packs/'
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
     resolve: {
         plugins: [
             new OpalWebpackResolverPlugin('resolve', 'resolved')
@@ -32,6 +29,19 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            includePaths: [path.resolve(__dirname, '../../app/assets/stylesheets')]
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -52,7 +62,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.rb$/,
+                test: /\.(rb|js.rb)$/,
                 use: [
                     'opal-webpack-loader'
                 ]
@@ -60,3 +70,4 @@ module.exports = {
         ]
     }
 };
+
