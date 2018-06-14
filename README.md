@@ -88,6 +88,10 @@ To get going:
 
 In principle the config works the same way for react-native or electron.
 
+## Deploy to Heroku (or others)
+include the heroku/nodejs buildpack to get recent node, yarn and webpack.
+Likewise for others.
+
 ## TL;DR; Running this app
 
 1. git clone
