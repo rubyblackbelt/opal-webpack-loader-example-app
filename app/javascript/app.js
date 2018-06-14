@@ -9,6 +9,9 @@ import * as ReactRouter from 'react-router';
 import * as ReactRouterDOM from 'react-router-dom';
 import * as ReactRailsUJS from 'react_ujs';
 
+// for lazy loading
+import ReactLoadable from 'react-loadable';
+
 // for opal/hyperloop modules to find React and others they must explicitly be saved
 // to the global space, otherwise webpack will encapsulate them locally here
 global.React = React;
@@ -17,6 +20,9 @@ global.History = History;
 global.ReactRouter = ReactRouter;
 global.ReactRouterDOM = ReactRouterDOM;
 global.ReactRailsUJS = ReactRailsUJS;
+
+// for lazy laoding
+global.ReactLoadable = ReactLoadable;
 
 // same for jQuery
 import jQuery from 'jquery';

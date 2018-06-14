@@ -66,6 +66,28 @@ a `owl_include_tag` is provided in `app/helpers/application_helper.rb`. See exam
 To resolve the assets with hashes in the filename for production, the webpack manifest is consulted by the
 `OpalWebpackManifest`, located in `config/initalizers/assets.rb`.
 
+## Lazy Loading Components
+
+Is done using react-loadable and webpack imports. Webpack automatically creates and loads at runtime
+the necessary chunks of javascript. Example is in app/hyperloop/components/app.rb with the lazy loaded
+component being app/hyperloop/components/lazy.rb
+
+## Mobile Apps from the same code base
+
+Included is a example config for cordova. Webpack simply builds a bundle, which is imported from the
+cordova main app.js. If hyper-router is used, the initial routes of the various
+platforms must be considered, they are empty or pint to index.html.
+Certain Hyperloop config and the initial component to be mounted must be configured for the app,
+this is done in cordova/www/index.html.
+
+To get going:
+- install cordova and the required platform development kits (XCode for IOS, Android Studio for Android etc.)
+- go to app root, run `yarn run cordova`, it will build the app js chunks for the cordova app and store it in cordova/www/js/app
+- go to the cordova directory, do a `yarn install`, and run the appropriate cordova commands, like `cordova run browser`
+- enjoy the app
+
+In principle the config works the same way for react-native or electron.
+
 ## TL;DR; Running this app
 
 1. git clone

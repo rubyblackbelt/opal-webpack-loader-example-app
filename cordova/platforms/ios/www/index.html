@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline' wss://ws-mt1.pusher.com https://sockjs-mt1.pusher.com; style-src https://fonts.googleapis.com https://fonts.gstatic.com 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; font-src https://fonts.gstatic.com data: http://localhost:8000;">
+        <meta name="format-detection" content="telephone=no">
+            
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body class="main-container">
+        <div data-react-class="React.TopLevelRailsComponent" data-react-props="{&quot;render_params&quot;:{},&quot;component_name&quot;:&quot;AppRouter&quot;,&quot;controller&quot;:&quot;Hyperloop&quot;}">
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/app/cordova_packs.js"></script>
+        <script type='text/javascript'>
+            window.HyperloopOpts = {"resource_transport":"pusher","resource_api_base_path":"/api","session_id":"c6af81f6507af432b3c7e3841ee71f3e","current_user_id":54,"form_authenticity_token":"KGk9QX4SlSAYdEPpJUJVUxwig+tgfvmgNs0V8oY3l4Q/5dezxFglMgWj59SKXxhMScsk3tYrhXcDXd/7V+e3rQ==","pusher":{"key":"e1ef057dfe6f7903c24f","cluster":"mt1","encrypted":null,"client_logging":true}};
+            Opal.Hyperloop.$const_get('Resource').$const_get('ClientDrivers').$initialize_client_drivers_on_boot();
+        </script>
+    </body>
+</html>
+

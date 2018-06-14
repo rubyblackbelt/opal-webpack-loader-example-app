@@ -24,6 +24,8 @@
 /yarn-error.log
 
 /public/assets
+/public/packs
+
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
@@ -31,3 +33,15 @@
 
 # ignore owl cache
 .owl_cache
+
+# ignore cordova generated things
+cordova/node_modules
+cordova/platforms/android/cordova/node_modules
+cordova/platforms/browser/cordova/node_modules
+cordova/platforms/ios/cordova/node_modules
+cordova/www/js/app
+cordova/platforms/android/app/src/main/assets/www/js/app
+cordova/platforms/android/app/build
+cordova/platforms/android/app/CordovaLib/build
+cordova/platforms/browser/www/js/app
+cordova/platforms/ios/www/js/app
