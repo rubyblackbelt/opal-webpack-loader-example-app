@@ -19,10 +19,4 @@ require 'reactrb/auto-import'
 require_tree 'stores'
 require_tree 'models'
 require_tree 'operations'
-
-# if not lazy loading, include all
-# require_tree 'components'
-
-# if lazy loading, include only those for the initial load
-require 'components/app'
-require 'components/busy'
+require_tree 'components'

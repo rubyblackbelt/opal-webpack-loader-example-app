@@ -30,7 +30,7 @@
         -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline' wss://ws-mt1.pusher.com https://sockjs-mt1.pusher.com; style-src https://fonts.googleapis.com https://fonts.gstatic.com 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; font-src file: https://fonts.gstatic.com data: http://localhost:8000;">
         <meta name="format-detection" content="telephone=no">
-            
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -38,14 +38,23 @@
         <title>Hello World</title>
     </head>
     <body class="main-container">
-        <div data-react-class="React.TopLevelRailsComponent" data-react-props="{&quot;render_params&quot;:{},&quot;component_name&quot;:&quot;AppRouter&quot;,&quot;controller&quot;:&quot;Hyperloop&quot;}">
+        <!-- specify the component to be mounted -->
+        <div data-react-class="React.TopLevelRailsComponent" data-react-props="{&quot;render_params&quot;:{},&quot;component_name&quot;:&quot;App&quot;,&quot;controller&quot;:&quot;Hyperloop&quot;}">
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/app/cordova_packs.js"></script>
-        <script type='text/javascript'>
-            console.warn("location: ", window.location);
-            window.HyperloopOpts = {"resource_transport":"pusher","resource_api_base_path":"/api","session_id":"c6af81f6507af432b3c7e3841ee71f3e","current_user_id":54,"form_authenticity_token":"KGk9QX4SlSAYdEPpJUJVUxwig+tgfvmgNs0V8oY3l4Q/5dezxFglMgWj59SKXxhMScsk3tYrhXcDXd/7V+e3rQ==","pusher":{"key":"e1ef057dfe6f7903c24f","cluster":"mt1","encrypted":null,"client_logging":true}};
-            Opal.Hyperloop.$const_get('Resource').$const_get('ClientDrivers').$initialize_client_drivers_on_boot();
+        <script type="text/javascript" src="js/app/app.js"></script>
+        <!-- additional hyperloop config -->
+        <!-- some of these must be updated from the server on app start, left as exercise for the reader -->
+        <!-- set engine path to host, port, here for development, adjust for production -->
+        <script type="text/javascript">
+            window.HyperloopEnginePath = 'http://localhost:3000/hyperloop';
+            window.HyperloopOpts = {"transport":"simple_poller","id":"87fe1d41-7346-4b82-935f-80f75ed7d40e-f463d80881c620b085e5cfad1263ba2c","acting_user_id":null,"env":"development","client_logging":true,"pusher_fake_js":null,"key":null,"cluster":null,"encrypted":true,"channel":"private-synchromesh","form_authenticity_token":"Khxcgh0ulbZULsKqfOYNYGJUHyX3iIvTy4PjnWrSM38h0PcdOSrfCQyzGlVfdydwMuWmG8T+FEC5eBIzOoaK+A==","seconds_between_poll":0.5,"auto_connect":["Hyperloop::Application","Hyperloop::Session-f463d80881c620b085e5cfad1263ba2c"]}
+        </script>
+        <script type="text/javascript">
+            if (typeof window.ReactiveRecordPublicColumnsHash === 'undefined') {
+            window.ReactiveRecordPublicColumnsHash = {}}
+            if (typeof window.ReactiveRecordInitialData === 'undefined') { window.ReactiveRecordInitialData = [] }
+            window.ReactiveRecordInitialData.push({})
         </script>
     </body>
 </html>
