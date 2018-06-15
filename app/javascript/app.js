@@ -1,5 +1,5 @@
 // import stylesheets
-import '../assets/stylesheets/app.scss';
+import '../assets/stylesheets/browser.scss';
 
 // basics for hyperloop
 import React from 'react';
@@ -40,6 +40,8 @@ global.$ = jQuery;
 // example for pusher
 // import Pusher from 'pusher-js';
 // global.Pusher = Pusher;
+//
+//
 
 // all the hyperloop requires go in this file
 // it needs to be imported first
@@ -51,7 +53,7 @@ Opal.require('hyperloop_webpack_loader');
 
 // this is required for hot reloading to work
 if (module.hot) {
-    module.hot.accept('./app.js', function() {
+    module.hot.accept('./browser.js', function() {
         console.log('Accepting the updated app_packs module!');
     })
 }

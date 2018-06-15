@@ -15,7 +15,6 @@ module.exports = {
     },
     entry: {
         app_packs: './app/javascript/packs/app_packs.js',
-        website_packs: './app/javascript/packs/website_packs.js'
     },
     output: {
         filename: '[name]_test.js',

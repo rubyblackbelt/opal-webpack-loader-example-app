@@ -15,7 +15,7 @@ module.exports = {
         maxEntrypointSize: 20000000
     },
     entry: {
-        app: './app/javascript/app.js',
+        app: './app/javascript/browser.js',
     },
     plugins: [
         new CompressionPlugin({ test: /\.js/ }), // gzip compress
