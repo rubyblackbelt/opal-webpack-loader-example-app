@@ -2,8 +2,8 @@
   "name": "webpal",
   "private": true,
   "engines": {
-    "node": "10.4.0",
-    "yarn": "1.7.0"
+    "node": "^10.4.0",
+    "yarn": "^1.7.0"
   },
   "dependencies": {
     "history": "^4.7.2",
@@ -13,7 +13,8 @@
     "react-loadable": "^5.4.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react_ujs": "^2.4.4"
+    "react_ujs": "^2.4.4",
+    "yarn": "^1.7.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
