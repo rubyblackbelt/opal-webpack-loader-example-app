@@ -8,6 +8,7 @@
   "dependencies": {
     "history": "^4.7.2",
     "jquery": "^3.3.1",
+    "materialize-css": "^0.100.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-loadable": "^5.4.0",

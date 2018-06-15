@@ -16,7 +16,6 @@ module.exports = {
     },
     entry: {
         app: './app/javascript/app.js',
-        website: './app/javascript/website.js'
     },
     plugins: [
         new CompressionPlugin({ test: /\.js/ }), // gzip compress
