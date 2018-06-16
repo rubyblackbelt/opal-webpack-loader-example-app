@@ -1,0 +1,14 @@
+@mixin heading-sizes($ratio: 0.1, $initial: 1em, $weight: 400) {
+  h1,h2,h3,h4,h5,h6 {
+    line-height: 1.1em;
+    font-weight: $weight;
+  }
+
+  @for $index from 1 through 6 {
+    h#{$index} {
+      $fontsize: $initial + (6 - $index) * $ratio;
+      font-size: $fontsize;
+      margin: ($fontsize / 2) 0 ($fontsize / 2.5) 0;
+    }
+  }
+}

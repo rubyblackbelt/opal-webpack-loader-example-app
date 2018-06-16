@@ -1,0 +1,19 @@
+@mixin text-selection($color: null,$highlight: #66f) {
+  @at-root body {
+    user-select: none;
+  }
+
+  :not(input):not(textarea):not([contenteditable='true'] *)::selection {
+    background: none;
+  }
+
+  h1,h2,h3,h4,h5,h6,p,a {
+    &::selection {
+      text-shadow: 0 0 1px $highlight;
+      text-decoration: underline;
+      @if $color {
+        color: $color;
+      }
+    }
+  }
+}
