@@ -34,6 +34,8 @@
 # ignore owl cache
 .owl_cache
 
+.DS_Store
+
 # ignore cordova generated things
 cordova/node_modules
 cordova/platforms/android/cordova/node_modules
