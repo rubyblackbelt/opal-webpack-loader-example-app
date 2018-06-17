@@ -25,6 +25,7 @@ module.exports = {
   entry: {
     app: ['./app/javascript/browser.js'], // entrypoint for hyperloop
     // have to add 'webpack-hot-client/client' for each additional entry point for hot reloading to work
+    website: ['webpack-hot-client/client', './app/javascript/website.js'], // entrypoint for website
   },
   output: {
     // webpack-serve keeps the output in memory

@@ -9,9 +9,9 @@ class App < Hyperloop::Router
       MAIN(class_name: 'container') do
 
         Switch do
-          Route('/', exact: true, mounts: Home)
+          Route('/home', exact: true, mounts: Home)
           Route('/about', mounts: About) # mount the wrapped lazy loading component
-          Route('',  exact: true) { Redirect('/') } if Cordova
+          Route('',  exact: true) { Redirect('/home', replace: true) } if Cordova
         end
 
         # define routes using the Route psuedo component.  Examples:
