@@ -26,5 +26,13 @@ module Webpal
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+		config.to_prepare do
+			Devise::SessionsController.layout "auth"
+			Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "auth" }
+			Devise::ConfirmationsController.layout "auth"
+			Devise::UnlocksController.layout "auth"
+			Devise::PasswordsController.layout "auth"
+		end
   end
 end
