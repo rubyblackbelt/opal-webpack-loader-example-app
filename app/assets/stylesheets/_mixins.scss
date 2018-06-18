@@ -1,0 +1,27 @@
+@mixin fix-nav($media-size) {
+  @media #{$media-size} {
+    nav  {
+      .sidenav {
+        transform: translateX(0);
+      }
+
+      .nav-wrapper {
+        z-index: 1;
+      }
+
+      .sidenav {
+        margin-top: $navbar-height;
+        z-index: -1;
+        position: absolute;
+      }
+    }
+
+    .sidenav-overlay {
+      display: none !important;
+    }
+
+    & > main {
+      margin-left: $sidenav-width;
+    }
+  }
+}

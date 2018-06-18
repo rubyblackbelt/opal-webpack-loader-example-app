@@ -1,0 +1,13 @@
+<% provide :stylesheets do %>
+  <%= owl_include_tag '/packs/website.js' %>
+<% end %>
+
+<%= inside_layout(:base) do %>
+  <main class="container">
+    <div class="card">
+      <div class="card-content">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+<% end %>

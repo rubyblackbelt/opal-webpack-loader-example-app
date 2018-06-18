@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   mount Hyperloop::Engine => '/hyperloop'
 
-  get '/(*other)', to: 'hyperloop#app'
+  get '/(*other)', to: 'hyperloop#app', as: :app
 end

@@ -14,6 +14,8 @@ import ReactLoadable from 'react-loadable';
 
 import ActionCable from 'actioncable';
 
+import Materialize from 'materialize-css/dist/js/materialize';
+
 // for opal/hyperloop modules to find React and others they must explicitly be saved
 // to the global space, otherwise webpack will encapsulate them locally here
 global.React = React;
@@ -27,6 +29,8 @@ global.ReactRailsUJS = ReactRailsUJS;
 global.ReactLoadable = ReactLoadable;
 
 global.ActionCable = ActionCable;
+
+global.Materialize = Materialize;
 
 // same for jQuery
 import jQuery from 'jquery';

@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 @import '~materialize-css/sass/materialize';
 @import '~material-icons/iconfont/material-icons.scss';
 @import './sensible_defaults/index';
@@ -9,4 +10,6 @@ body {
   .container {
     color: #333;
   }
+
+  // @include fix-nav($large-and-up);
 }
