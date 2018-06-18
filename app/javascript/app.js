@@ -12,6 +12,8 @@ import * as ReactRailsUJS from 'react_ujs';
 // for lazy loading
 import ReactLoadable from 'react-loadable';
 
+import ActionCable from 'actioncable';
+
 // for opal/hyperloop modules to find React and others they must explicitly be saved
 // to the global space, otherwise webpack will encapsulate them locally here
 global.React = React;
@@ -23,6 +25,8 @@ global.ReactRailsUJS = ReactRailsUJS;
 
 // for lazy laoding
 global.ReactLoadable = ReactLoadable;
+
+global.ActionCable = ActionCable;
 
 // same for jQuery
 import jQuery from 'jquery';

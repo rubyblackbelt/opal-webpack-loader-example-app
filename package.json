@@ -6,6 +6,7 @@
     "yarn": "^1.7.0"
   },
   "dependencies": {
+    "actioncable": "^5.2.0",
     "history": "^4.7.2",
     "jquery": "^3.3.1",
     "material-icons": "^0.2.3",

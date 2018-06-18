@@ -96,7 +96,7 @@ GIT
 
 GIT
   remote: https://github.com/janbiedermann/opal.git
-  revision: fd9cf26a65cd53b30dce5eac87f7adfe672cc880
+  revision: 4abc31d211ab4021ef7d811325709b2e04ee9a90
   branch: es6_import_export
   specs:
     opal (0.11.1.dev)
@@ -219,7 +219,7 @@ GEM
     mutations (0.8.2)
       activesupport
     nio4r (2.3.1)
-    nokogiri (1.8.2)
+    nokogiri (1.8.3)
       mini_portile2 (~> 2.3.0)
     oj (3.6.2)
     opal-activesupport (0.3.1)
@@ -323,11 +323,11 @@ DEPENDENCIES
   hyper-store!
   hyperloop!
   hyperloop-config!
-  jbuilder (~> 2.5)
+  jbuilder (>= 2.5)
   listen (>= 3.0.5, < 3.2)
   opal!
   opal-webpack-compile-server (= 0.1.7)
-  puma (~> 3.11)
+  puma (>= 3.11)
   rails (~> 5.2.0)
   selenium-webdriver
   sqlite3
