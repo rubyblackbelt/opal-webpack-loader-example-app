@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= Settings.name %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :stylesheets if content_for?(:stylesheets)%>
+    <%= yield :javascripts if content_for?(:javascripts)%>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

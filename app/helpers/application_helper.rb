@@ -9,4 +9,8 @@ module ApplicationHelper
     when 'test' then javascript_include_tag(path[0..-4] + '_test' + path[-3..-1])
     end
   end
+
+  def inside_layout(layout = :base, &block)
+    render :inline => capture(&block), :layout => "layouts/#{layout}"
+  end
 end

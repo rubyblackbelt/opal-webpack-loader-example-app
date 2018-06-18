@@ -47,3 +47,7 @@ cordova/platforms/android/app/build
 cordova/platforms/android/app/CordovaLib/build
 cordova/platforms/browser/www/js/app
 cordova/platforms/ios/www/js/app
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

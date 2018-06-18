@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Webpal</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<% provide :stylesheets do %>
+  <%= owl_include_tag '/packs/app.js' %>
+<% end %>
 
-    <%= owl_include_tag '/packs/app.js' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<%= inside_layout(:base) do %>
+  <%= yield %>
+<% end %>
