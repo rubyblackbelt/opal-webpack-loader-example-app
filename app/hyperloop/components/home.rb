@@ -29,9 +29,13 @@ class Home < Hyperloop::Router::Component
   end
 
   render do
-    DIV(class_name: 'card') do
-      DIV(class_name: 'card-content') do
-        H1 { "Home" }
+    DIV do
+      H1 { "Cordova" } if $$.Cordova
+
+      DIV(class_name: 'card') do
+        DIV(class_name: 'card-content') do
+          H1 { "Home" }
+        end
       end
     end
   end

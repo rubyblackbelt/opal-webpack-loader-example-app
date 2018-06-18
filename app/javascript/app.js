@@ -50,14 +50,16 @@ global.$ = jQuery;
 // all the hyperloop requires go in this file
 // it needs to be imported first
 import init_app from 'hyperloop_webpack_loader.rb';
+
 // then it needs to initalized, this will register the available opal ruby modules
 init_app();
+
 // then it needs to be loaded, this will actually run the code and start the application
 Opal.require('hyperloop_webpack_loader');
 
 // this is required for hot reloading to work
 if (module.hot) {
-    module.hot.accept('./browser.js', function() {
-        console.log('Accepting the updated app_packs module!');
-    })
+  module.hot.accept('./browser.js', function() {
+    console.log('Accepting the updated app_packs module!');
+  })
 }

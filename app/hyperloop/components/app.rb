@@ -1,17 +1,33 @@
 class App < Hyperloop::Router
-  Cordova = Native(`global.Cordova`)
-  history Cordova ? :hash : :browser
+  history :browser
+
+  before_mount do
+    # any initialization particularly of state variables goes here.
+    # this will execute on server (prerendering) and client.
+  end
+
+  after_mount do
+    # any client only post rendering initialization goes here.
+    # i.e. start timers, HTTP requests, and low level jquery operations etc.
+  end
+
+  before_update do
+    # called whenever a component will be re-rerendered
+  end
+
+  before_unmount do
+    # cleanup any thing (i.e. timers) before component is destroyed
+  end
 
   route do
     DIV do
       MainNavigation {}
 
       MAIN(class_name: 'container') do
-
         Switch do
           Route('/home', exact: true, mounts: Home)
-          Route('/about', mounts: About) # mount the wrapped lazy loading component
-          Route('',  exact: true) { Redirect('/home', replace: true) } if Cordova
+          Route('/about', mounts: About)
+          Route('',  exact: true) { Redirect('/home', replace: true) } if $$.Cordova
         end
 
         # define routes using the Route psuedo component.  Examples:
