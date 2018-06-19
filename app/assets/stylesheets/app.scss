@@ -4,12 +4,16 @@
 @import '~material-icons/iconfont/material-icons.scss';
 @import './sensible_defaults/index';
 
-body {
-  background: #fff;
+html {
+  background: $primary-color;
 
-  .container {
-    color: #333;
+  body {
+    background: #fff;
+
+    .container {
+      color: #333;
+    }
+
+    // @include fix-nav($large-and-up);
   }
-
-  // @include fix-nav($large-and-up);
 }
