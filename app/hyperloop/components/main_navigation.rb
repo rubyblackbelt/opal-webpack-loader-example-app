@@ -1,8 +1,8 @@
 class MainNavigation < Hyperloop::Router::Component
   render do
     NAV(role: 'navigation') do
-      DIV(class_name: 'nav-wrapper') do
-        Link('/home', class_name: 'brand-logo') { 'Home' }
+      DIV(class_name: 'nav-wrapper container') do
+        Link('/home', class_name: 'brand-logo') { 'Logo' }
 
         UL(class_name: 'right hide-on-med-and-down') do
           LI { Link('/home') { 'Home' } }
