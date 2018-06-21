@@ -1,4 +1,4 @@
-@mixin fix-nav($media-size) {
+@mixin fixed-nav($media-size) {
   @media #{$media-size} {
     nav  {
       .sidenav {

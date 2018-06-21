@@ -1,4 +1,4 @@
-class WebsiteController < ApplicationController
+class WebsiteController < ActionController::Base
   layout 'website'
 
   def index

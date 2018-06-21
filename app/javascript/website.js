@@ -13,7 +13,7 @@ $(document).ready(function(){
 	Materialize.Sidenav.init('.sidenav', { isFixed: true });
 	Materialize.AutoInit();
 
-	Materialize.toast({html: 'Hello', displayLength: 4000, inDuration: 500, outDuration: 500 })
+	// Materialize.toast({html: 'Welcome', displayLength: 4000, inDuration: 500, outDuration: 500 })
 });
 
 // required for hot reloading to work
