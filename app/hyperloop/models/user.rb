@@ -7,8 +7,4 @@ class User < ApplicationRecord
   def self.current
     Hyperloop::Application.acting_user_id ? find(Hyperloop::Application.acting_user_id) : User.new
   end
-
-  class << self
-    alias _new_without_sti_type_cast new
-  end
 end
