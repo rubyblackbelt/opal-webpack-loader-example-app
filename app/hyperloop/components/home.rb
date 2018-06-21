@@ -37,6 +37,12 @@ class Home < Hyperloop::Router::Component
           H1 { "Home" }
         end
       end
+
+      DIV(class_name: 'card') do
+        DIV(class_name: 'card-content') do
+          H2 {"Helloworld - #{User.current.email}"}
+        end
+      end
     end
   end
 end
