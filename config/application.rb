@@ -5,7 +5,6 @@ require "rails"
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
-require "active_storage/engine"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
@@ -20,7 +19,18 @@ Bundler.require(*Rails.groups)
 module Webpal
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 5.1
+
+    if Rails.env.production?
+      config.hyperloop.auto_config = false
+
+      config.autoload_paths -= %W(#{config.root}/app/hyperloop)
+      config.eager_load_paths -= %W(#{config.root}/app/hyperloop)
+      config.autoload_paths += %W(#{config.root}/app/hyperloop/models)
+      config.eager_load_paths += %W(#{config.root}/app/hyperloop/models)
+      config.autoload_paths += %W(#{config.root}/app/hyperloop/operations)
+      config.eager_load_paths += %W(#{config.root}/app/hyperloop/operations)
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
