@@ -10,6 +10,7 @@ class MainNavigation < Hyperloop::Router::Component
         UL(class_name: 'right hide-on-med-and-down') do
           LI { Link('/home') { 'Home' } }
           LI { Link('/about') { 'About' } }
+          LI { Link('/profile') { 'Profile' } }
         end
 
         A(href: '#', class_name: 'sidenav-trigger', 'data-target': 'nav-mobile') do
@@ -20,6 +21,7 @@ class MainNavigation < Hyperloop::Router::Component
         UL(id: 'nav-mobile', class_name: 'sidenav') do
           LI { Link('/home', class_name: 'sidenav-close') { 'Home' } }
           LI { Link('/about', class_name: 'sidenav-close') { 'About' } }
+          LI { Link('/profile', class_name: 'sidenav-close') { 'Profile' } }
         end
     end
   end

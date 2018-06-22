@@ -56,5 +56,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]     # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
 group :development do
-  # gem 'foreman'                                                      # not needed if you use node-foreman
+  gem 'foreman'                                                      # not needed if you use node-foreman
 end

@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable unless RUBY_ENGINE == 'opal'
 
   def self.current
-    Hyperloop::Application.acting_user_id ? find(Hyperloop::Application.acting_user_id) : User.new
+    Hyperloop::Application.acting_user_id ? find(Hyperloop::Application.acting_user_id) : nil
   end
 end

@@ -1,15 +1,17 @@
 @import './variables';
 @import './mixins';
+@import './forms';
 @import '~materialize-css/sass/materialize';
 @import '~material-icons/iconfont/material-icons.scss';
 @import './sensible_defaults/index';
+@import './components/index';
 
 html {
   background: $primary-color;
 }
 
 body {
-  background: #fff;
+  background: #fdfdfd;
 
   .container {
     color: #333;
@@ -20,14 +22,6 @@ body {
   &, & main {
     height: 100%;
   }
-}
-
-.spinner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 main.container {

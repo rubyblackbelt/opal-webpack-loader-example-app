@@ -1,4 +1,4 @@
-class Spinner < Hyperloop::Router::Component
+class Spinner < Hyperloop::Component
   render do
     DIV(class_name: 'spinner') do
       DIV(class_name: 'preloader-wrapper big active') do

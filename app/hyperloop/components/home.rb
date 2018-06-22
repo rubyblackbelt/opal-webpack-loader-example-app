@@ -13,6 +13,8 @@ class Home < Hyperloop::Router::Component
   before_mount do
     # any initialization particularly of state variables goes here.
     # this will execute on server (prerendering) and client.
+
+    @user = User.current
   end
 
   after_mount do
@@ -29,7 +31,7 @@ class Home < Hyperloop::Router::Component
   end
 
   render do
-    DIV do
+    Loadable({ loadable: @user }) do
       H1 { "Running Cordova" } if $$.Cordova
 
       DIV(class_name: 'card') do
@@ -40,7 +42,7 @@ class Home < Hyperloop::Router::Component
 
       DIV(class_name: 'card') do
         DIV(class_name: 'card-content') do
-          H2 {"Helloworld - #{User.current.email}"}
+          H2 {"Helloworld - #{@user.email}"}
         end
       end
     end
