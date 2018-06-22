@@ -34,6 +34,8 @@ class App < Hyperloop::Router
           Switch do
             Route('/home', exact: true, mounts: Home)
             Route('/about', mounts: About)
+            Route('/profile', mounts: Profile)
+
             Route('',  exact: true) { Redirect('/home', replace: true) } if $$.Cordova
           end
 
