@@ -21,15 +21,15 @@ gem 'opal', github: 'janbiedermann/opal', branch: 'es6_import_export'  # need th
 gem 'opal-webpack-compile-server', '0.1.7', require: false             # and this, its started by the yarn run commands and serves opal-webpack-loader by compiling ruby files for it
 
 # need the pinata branch
-gem 'hyper-component',     github: 'janbiedermann/hyper-component',    branch: 'pinata'
-gem 'hyper-mesh',          github: 'janbiedermann/hyper-mesh',         branch: 'pinata'
-gem 'hyper-model',         github: 'janbiedermann/hyper-model',        branch: 'pinata'
-gem 'hyper-operation',     github: 'janbiedermann/hyper-operation',    branch: 'pinata'
-gem 'hyper-react',         github: 'janbiedermann/hyper-react',        branch: 'pinata'
-gem 'hyper-router',        github: 'janbiedermann/hyper-router',       branch: 'pinata'
-gem 'hyper-store',         github: 'janbiedermann/hyper-store',        branch: 'pinata'
-gem 'hyperloop',           github: 'janbiedermann/hyperloop',          branch: 'pinata'
-gem 'hyperloop-config',    github: 'janbiedermann/hyperloop-config',   branch: 'pinata'
+gem 'hyper-component',     github: 'ruby-hyperloop/hyper-component',    branch: 'pinata'
+gem 'hyper-mesh',          github: 'ruby-hyperloop/hyper-mesh',         branch: 'pinata'
+gem 'hyper-model',         github: 'ruby-hyperloop/hyper-model',        branch: 'pinata'
+gem 'hyper-operation',     github: 'ruby-hyperloop/hyper-operation',    branch: 'pinata'
+gem 'hyper-react',         github: 'ruby-hyperloop/hyper-react',        branch: 'pinata'
+gem 'hyper-router',        github: 'ruby-hyperloop/hyper-router',       branch: 'pinata'
+gem 'hyper-store',         github: 'ruby-hyperloop/hyper-store',        branch: 'edge'
+gem 'hyperloop',           github: 'ruby-hyperloop/hyperloop',          branch: 'pinata'
+gem 'hyperloop-config',    github: 'ruby-hyperloop/hyperloop-config',   branch: 'pinata'
 
 gem 'bootsnap', '>= 1.1.0', require: false                             # Reduces boot times through caching; required in config/boot.rb
 
